@@ -1,0 +1,115 @@
+Index: src/main/java/com/example/dacn_qlnv/Config/SecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dacn_qlnv.Config;\r\n\r\nimport com.example.dacn_qlnv.Services.EmployeeService;\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.springframework.context.annotation.Bean;\r\nimport org.springframework.context.annotation.Configuration;\r\nimport org.springframework.security.authentication.dao.DaoAuthenticationProvider;\r\nimport org.springframework.security.config.annotation.web.builders.HttpSecurity;\r\nimport org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;\r\nimport org.springframework.security.core.userdetails.UserDetailsService;\r\nimport org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;\r\nimport org.springframework.security.crypto.password.PasswordEncoder;\r\nimport org.springframework.security.web.SecurityFilterChain;\r\n\r\n@Configuration\r\n@EnableWebSecurity\r\n@RequiredArgsConstructor\r\npublic class SecurityConfig {\r\n    private final EmployeeService employeeService;\r\n\r\n    @Bean\r\n    public UserDetailsService userDetailsService() {\r\n        return employeeService;\r\n    }\r\n\r\n    @Bean\r\n    public DaoAuthenticationProvider authenticationProvider() {\r\n        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();\r\n        authProvider.setUserDetailsService(userDetailsService());\r\n        authProvider.setPasswordEncoder(passwordEncoder());\r\n        return authProvider;\r\n    }\r\n\r\n    @Bean\r\n    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {\r\n        http\r\n                .authorizeRequests(authorizeRequests -> authorizeRequests\r\n                        .requestMatchers(\"/css/**\", \"/js/**\", \"/\", \"/login\", \"/register\", \"/error\",\r\n                                \"/forgot-password\", \"/reset-password\", \"/images/**\").permitAll()\r\n                        .anyRequest().authenticated()\r\n//                        .anyRequest().permitAll()\r\n                )\r\n                .formLogin(formLogin -> formLogin\r\n                        .loginPage(\"/login\")\r\n                        .loginProcessingUrl(\"sign/login\")\r\n                        .defaultSuccessUrl(\"/home\")\r\n                        .failureUrl(\"/login\")\r\n                        .permitAll()\r\n                )\r\n                .logout(logout -> logout\r\n                        .logoutUrl(\"/logout\")\r\n                        .logoutSuccessUrl(\"/login\")\r\n                        .deleteCookies(\"JSESSIONID\")\r\n                        .invalidateHttpSession(true)\r\n                        .clearAuthentication(true)\r\n                        .permitAll()\r\n                );\r\n\r\n        return http.build();\r\n    }\r\n\r\n    @Bean\r\n    public PasswordEncoder passwordEncoder() {\r\n        return new BCryptPasswordEncoder();\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n////package com.example.dacn_qlnv.Config;\r\n////\r\n////import org.springframework.context.annotation.Bean;\r\n////import org.springframework.context.annotation.Configuration;\r\n////import org.springframework.security.config.annotation.web.builders.HttpSecurity;\r\n////import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;\r\n////import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;\r\n////import org.springframework.security.crypto.password.PasswordEncoder;\r\n////import org.springframework.security.web.SecurityFilterChain;\r\n////\r\n////@Configuration\r\n////@EnableWebSecurity\r\n////public class SecurityConfig {\r\n////\r\n////    @Bean\r\n////    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {\r\n////        http\r\n////                .authorizeRequests(authorizeRequests -> authorizeRequests\r\n////                        //.anyRequest().permitAll() // Cho phép tất cả mọi yêu cầu...\r\n////                        .anyRequest().authenticated()\r\n////                )\r\n////                ;\r\n////\r\n////        return http.build();\r\n////    }\r\n////\r\n////    @Bean\r\n////    public PasswordEncoder passwordEncoder() {\r\n////        return new BCryptPasswordEncoder();\r\n////    }\r\n////}\r\n//\r\n
+===================================================================
+diff --git a/src/main/java/com/example/dacn_qlnv/Config/SecurityConfig.java b/src/main/java/com/example/dacn_qlnv/Config/SecurityConfig.java
+--- a/src/main/java/com/example/dacn_qlnv/Config/SecurityConfig.java	
++++ b/src/main/java/com/example/dacn_qlnv/Config/SecurityConfig.java	
+@@ -1,6 +1,7 @@
+ package com.example.dacn_qlnv.Config;
+ 
+ import com.example.dacn_qlnv.Services.EmployeeService;
++import jakarta.validation.constraints.NotNull;
+ import lombok.RequiredArgsConstructor;
+ import org.springframework.context.annotation.Bean;
+ import org.springframework.context.annotation.Configuration;
+@@ -25,27 +26,33 @@
+ 
+     @Bean
+     public DaoAuthenticationProvider authenticationProvider() {
+-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+-        authProvider.setUserDetailsService(userDetailsService());
+-        authProvider.setPasswordEncoder(passwordEncoder());
+-        return authProvider;
++        var auth = new DaoAuthenticationProvider(); // Tạo nhà cung cấp xác thực.
++        auth.setUserDetailsService(userDetailsService()); // Thiết lập dịch vụ chi tiết người dùng.
++        auth.setPasswordEncoder(passwordEncoder()); // Thiết lập cơ chế mã hóa mật khẩu.
++        return auth; // Trả về nhà cung cấp xác thực.
+     }
++    @Bean
++    public PasswordEncoder passwordEncoder() {
++        return new BCryptPasswordEncoder();
++    }
+ 
+     @Bean
+     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+-        http
++        return http
+                 .authorizeRequests(authorizeRequests -> authorizeRequests
+-                        .requestMatchers("/css/**", "/js/**", "/", "/login", "/register", "/error",
+-                                "/forgot-password", "/reset-password", "/images/**").permitAll()
++                        .requestMatchers("/css/**", "/js/**", "/", "/oauth/**", "/register", "/error",
++                                "/products", "/cart", "/cart/**","/images/**")
++                        .permitAll()
++                        .requestMatchers("/products/edit/**", "/products/add", "/products/delete",
++                                "/api/products", "/categories/add", "/order/list/**")
++                        .hasAuthority("ADMIN")
++                        .requestMatchers("/api/**")
++                        .permitAll()
++                        .requestMatchers("/changePassword")
++                        .authenticated()
++                        .requestMatchers("/forgot-password", "/reset-password")
++                        .permitAll()
+                         .anyRequest().authenticated()
+-//                        .anyRequest().permitAll()
+-                )
+-                .formLogin(formLogin -> formLogin
+-                        .loginPage("/login")
+-                        .loginProcessingUrl("sign/login")
+-                        .defaultSuccessUrl("/home")
+-                        .failureUrl("/login")
+-                        .permitAll()
+                 )
+                 .logout(logout -> logout
+                         .logoutUrl("/logout")
+@@ -54,15 +61,43 @@
+                         .invalidateHttpSession(true)
+                         .clearAuthentication(true)
+                         .permitAll()
+-                );
++                )
++                .formLogin(formLogin -> formLogin
++                        .loginPage("/login")
++                        .loginProcessingUrl("/login")
++                        .defaultSuccessUrl("/home")
++                        .failureUrl("/login?error")
++                        .permitAll()
++                )
++//                .oauth2Login(oauth2 -> oauth2
++//                        .loginPage("/login")
++//                        .defaultSuccessUrl("/products")
++//                        .failureUrl("/login?error")
++//                )
++
++//                .rememberMe(rememberMe -> rememberMe
++//                        .key("hutech")
++//                        .rememberMeCookieName("hutech")
++//                        .tokenValiditySeconds(24 * 60 * 60) // 24 hours
++//                        .tokenRepository(persistentTokenRepository())
++//                        .userDetailsService(userDetailsService())
++//                        .tokenRepository(new JdbcPersistentTokenRepository(dataSource)) // Khởi tạo JdbcPersistentTokenRepository với dataSource
++//                )
+ 
+-        return http.build();
++                .exceptionHandling(exceptionHandling -> exceptionHandling
++                        .accessDeniedPage("/403")
++                )
++                .sessionManagement(sessionManagement -> sessionManagement
++                        .maximumSessions(1)
++                        .expiredUrl("/login")
++                )
++                .httpBasic(httpBasic -> httpBasic
++                        .realmName("hutech")
++                )
++                .build();
+     }
+ 
+-    @Bean
+-    public PasswordEncoder passwordEncoder() {
+-        return new BCryptPasswordEncoder();
+-    }
++
+ }
+ 
+ 

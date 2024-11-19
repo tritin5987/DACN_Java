@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57a020c5-231f-425f-aa2a-db486aabcd71" name="Changes" comment="Profile">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dacn_qlnv/Models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dacn_qlnv/Models/Employee.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sang" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.3.3/spring-security-web-6.3.3.jar!/org/springframework/security/web/FilterChainProxy.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ny7z7rYjewi0QLddaWlxYG3Bx8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DacnQlnvApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Tri&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/OneDrive/Desktop/DACN/src/main/resources/templates/sign&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.dacn_qlnv.Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\resources\templates\sign" />
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\resources\static\js" />
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\resources\templates\home" />
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\resources\static\css" />
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\java\com\example\dacn_qlnv" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\resources\static\js" />
+      <recent name="C:\Users\hp\OneDrive\Desktop\DACN\src\main\resources\templates\home" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.dacn_qlnv.Services" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.dacn_qlnv.Config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.dacn_qlnv.Models" />
+      <recent name="com.example.dacn_qlnv.Services" />
+      <recent name="com.example.dacn_qlnv" />
+      <recent name="com.example.dacn_qlnv.Config" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DacnQlnvApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="DACN_QLNV" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dacn_qlnv.DacnQlnvApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57a020c5-231f-425f-aa2a-db486aabcd71" name="Changes" comment="" />
+      <created>1729933721819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729933721819</updated>
+      <workItem from="1729933722935" duration="8157000" />
+      <workItem from="1729949864232" duration="3783000" />
+      <workItem from="1730025206471" duration="18000" />
+      <workItem from="1730025283722" duration="5316000" />
+      <workItem from="1730030647802" duration="2000" />
+      <workItem from="1730030728623" duration="1134000" />
+      <workItem from="1730031928441" duration="2717000" />
+      <workItem from="1730034665698" duration="567000" />
+      <workItem from="1730035301111" duration="514000" />
+      <workItem from="1730036122589" duration="16000" />
+      <workItem from="1730043062920" duration="1294000" />
+      <workItem from="1730044530340" duration="209000" />
+      <workItem from="1730051507324" duration="171000" />
+      <workItem from="1730052410720" duration="9604000" />
+      <workItem from="1730064887493" duration="111000" />
+      <workItem from="1730099961352" duration="118000" />
+      <workItem from="1730128585587" duration="15000" />
+      <workItem from="1730159424018" duration="390000" />
+      <workItem from="1730162707894" duration="572000" />
+      <workItem from="1730164360372" duration="880000" />
+      <workItem from="1730307970621" duration="4802000" />
+      <workItem from="1730312832684" duration="8000" />
+      <workItem from="1730822083224" duration="2846000" />
+      <workItem from="1730825060772" duration="2004000" />
+      <workItem from="1730827102248" duration="2084000" />
+      <workItem from="1730829230288" duration="7057000" />
+      <workItem from="1730898129063" duration="3505000" />
+      <workItem from="1730913506917" duration="743000" />
+      <workItem from="1731283311195" duration="5554000" />
+      <workItem from="1731289091687" duration="41000" />
+      <workItem from="1731467742091" duration="626000" />
+    </task>
+    <task id="LOCAL-00001" summary="Begin">
+      <option name="closed" value="true" />
+      <created>1729933824253</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729933824253</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Begin">
+      <option name="closed" value="true" />
+      <created>1729933890832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729933890832</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Begin">
+      <option name="closed" value="true" />
+      <created>1729934154152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729934154152</updated>
+    </task>
+    <task id="LOCAL-00004" summary="LoginFail">
+      <option name="closed" value="true" />
+      <created>1729937088176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729937088176</updated>
+    </task>
+    <task id="LOCAL-00005" summary="LoginFail">
+      <option name="closed" value="true" />
+      <created>1729949889241</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729949889241</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Edit Luong, Hien thi Phong Ban">
+      <option name="closed" value="true" />
+      <created>1730029084085</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730029084085</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Chat">
+      <option name="closed" value="true" />
+      <created>1730035642692</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730035642692</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Chat">
+      <option name="closed" value="true" />
+      <created>1730063932840</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730063932840</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Chat">
+      <option name="closed" value="true" />
+      <created>1730064906405</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730064906405</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Login Fail">
+      <option name="closed" value="true" />
+      <created>1730828930297</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730828930297</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Login">
+      <option name="closed" value="true" />
+      <created>1730836444229</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730836444229</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Change,Forget">
+      <option name="closed" value="true" />
+      <created>1731286970565</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731286970565</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Profile">
+      <option name="closed" value="true" />
+      <created>1731288774797</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731288774797</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Begin" />
+    <MESSAGE value="LoginFail" />
+    <MESSAGE value="Edit Luong, Hien thi Phong Ban" />
+    <MESSAGE value="Chat" />
+    <MESSAGE value="Login Fail" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Tri' into Tri&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/example/dacn_qlnv/Config/SecurityConfig.java" />
+    <MESSAGE value="Login" />
+    <MESSAGE value="Change,Forget" />
+    <MESSAGE value="Profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanDefinitionStoreException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
